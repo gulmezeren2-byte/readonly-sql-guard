@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "readonly-sql-guard"
+dynamic = ["version"]
+description = "A provably read-only SQL guard for AI agents - checks what a statement calls, not just its shape. Postgres, MySQL, SQL Server, SQLite."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Eren Gülmez" }]
+keywords = [
+    "sql", "read-only", "security", "guardrails", "mcp", "model-context-protocol",
+    "ai-agents", "llm", "sql-injection", "sqlglot", "postgres", "mysql", "sqlserver", "sqlite",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Database",
+    "Topic :: Security",
+    "Typing :: Typed",
+]
+dependencies = ["sqlglot>=23"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff", "hypothesis>=6"]
+
+[project.scripts]
+readonly-sql-guard = "readonly_sql_guard.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gulmezeren2-byte/readonly-sql-guard"
+Repository = "https://github.com/gulmezeren2-byte/readonly-sql-guard"
+"Live playground" = "https://gulmezeren2-byte.github.io/erp-report-engine/playground.html"
+
+[tool.hatch.version]
+path = "readonly_sql_guard/__init__.py"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
