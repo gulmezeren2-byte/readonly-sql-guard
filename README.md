@@ -95,6 +95,8 @@ readonly-sql-guard check "SELECT 1" --dialect postgres
 
 This is the read-only guard extracted from [**erp-report-engine**](https://github.com/gulmezeren2-byte/erp-report-engine) — a read-only reporting and MCP layer for the database behind an ERP — generalised so any tool can adopt it. That project is the flagship instantiation; this is the reusable primitive.
 
+Its sibling **[ossie-guard](https://github.com/gulmezeren2-byte/ossie-guard)** applies the same idea one layer up: it lints [Apache Ossie](https://github.com/apache/ossie) semantic models for metrics whose dialects silently disagree, and for expressions that are not pure reads — reusing this denylist to do it.
+
 ## License
 
 MIT © Eren Gülmez
