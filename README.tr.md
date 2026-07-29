@@ -26,6 +26,10 @@ Bu ilk vakalar, gerçek MCP sunucularında [Anthropic'in referans Postgres sunuc
 
 Kendi saldırını [tarayıcıdaki oyun alanına](https://gulmezeren2-byte.github.io/erp-report-engine/playground.html) yapıştır.
 
+![readonly-sql-guard benchmark çıktısı: 28 iyi-biçimli SQL saldırısının tamamı reddedildi — COMMIT; DROP işlem kaçışı ve Supabase 'lethal trifecta' yazma ayağı dahil — ve 8 meşru okumanın tamamı serbest bırakıldı; yanında yalnız-şekle bakan kontrollerin 6/28 ve 9/28 skorları](https://raw.githubusercontent.com/gulmezeren2-byte/readonly-sql-guard/main/docs/assets/benchmark.png)
+
+*Tüm benchmark, tek komut, veritabanı gerekmez: `readonly-sql-guard benchmark`.*
+
 ## Kurulum & Kullanım
 
 ```bash

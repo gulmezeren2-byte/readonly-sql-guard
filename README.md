@@ -31,6 +31,10 @@ The first two of those, in real MCP servers, got [Anthropic's reference Postgres
 
 Every number is computed from a live run. Paste your own attack into the [in-browser playground](https://gulmezeren2-byte.github.io/erp-report-engine/playground.html) (the same guard, via Pyodide, nothing sent anywhere).
 
+![readonly-sql-guard benchmark output: 28 well-formed SQL attacks all refused — including the COMMIT; DROP transaction escape and the Supabase lethal-trifecta write leg — and all 8 legitimate reads allowed, next to the 6/28 and 9/28 scored by shape-only checks](https://raw.githubusercontent.com/gulmezeren2-byte/readonly-sql-guard/main/docs/assets/benchmark.png)
+
+*The whole benchmark, one command, no database required: `readonly-sql-guard benchmark`.*
+
 ## Install
 
 ```bash
